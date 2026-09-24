@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<section class="intro">
+  <h1>Field notes on AI systems and software architecture.</h1>
+  <p>I'm a Tech Lead and AI Architect. I write about decisions I made, what they cost, and what running the result taught me. Every note links to code you can read and run.</p>
+</section>
+<ul class="posts">
+{% for post in site.posts %}
+  <li>
+    <a href="{{ post.url | relative_url }}"><h2>{{ post.title }}</h2></a>
+    <p class="meta">{{ post.date | date: '%-d %B %Y' }}{% if post.tags %} · {{ post.tags | join: ' · ' }}{% endif %}</p>
+    {% if post.lede %}<p>{{ post.lede }}</p>{% endif %}
+  </li>
+{% endfor %}
+</ul>

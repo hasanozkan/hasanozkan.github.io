@@ -1,0 +1,22 @@
+title: Hasan Özkan
+description: Field notes on AI systems, software architecture, and running what I build.
+url: https://hasanozkan.github.io
+lang: en
+author:
+  name: Hasan Özkan
+  url: https://hasanozkan.github.io
+image: /assets/img/og-default.png
+social:
+  name: Hasan Özkan
+  links:
+    - https://github.com/hasanozkan
+    - https://www.linkedin.com/in/hasanozkan/
+permalink: /:title/
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+exclude: [README.md, og]

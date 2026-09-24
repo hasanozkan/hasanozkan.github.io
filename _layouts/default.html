@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="{{ site.lang }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{% seo %}
+{% feed_meta %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+</head>
+<body>
+<header class="wrap top">
+  <a class="name" href="{{ '/' | relative_url }}">Hasan Özkan</a>
+  <nav><a href="https://github.com/hasanozkan">GitHub</a><a href="https://www.linkedin.com/in/hasanozkan/">LinkedIn</a><a href="{{ '/feed.xml' | relative_url }}">RSS</a></nav>
+</header>
+<main class="wrap">{{ content }}</main>
+<footer class="wrap foot">© {{ 'now' | date: '%Y' }} Hasan Özkan · Opinions and samples are my own.</footer>
+</body>
+</html>
