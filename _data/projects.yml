@@ -1,0 +1,18 @@
+- name: llm-tool-calling-assistant
+  kind: AI system
+  what: Provider-neutral LLM gateway, validated tool contracts, writes that wait for the user, prompt-injection defence, evals as a CI gate, GenAI telemetry.
+- name: ai-native-engineering
+  kind: Playbook
+  what: How coding agents work inside a team — the loop, gates, shared memory, approval boundaries and failure patterns, with tested gate tools.
+- name: spec-driven-ddd-python
+  kind: Architecture
+  what: A modular monolith where specs lead — numbered rules traced to tests, bounded contexts that only talk through events, policy as data.
+- name: spec-driven-ddd-dotnet
+  kind: Architecture
+  what: The same domain in .NET 10 from byte-identical specs and the same HTTP contract, with a conformance gate between the two.
+- name: gitops-reference
+  kind: Platform
+  what: Flux GitOps on a laptop in one command, with observability as code whose dashboards and alerts are checked against telemetry contracts.
+- name: contract-first-react-native
+  kind: Mobile
+  what: An Expo client with types generated from both services' contracts, a drift gate, honest mocks and live tests against the real services.

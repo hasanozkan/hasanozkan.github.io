@@ -5,16 +5,30 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 {% seo %}
 {% feed_meta %}
+<meta name="theme-color" content="#0b0d10">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%230b0d10'/><text x='32' y='42' font-family='Georgia,serif' font-size='30' fill='%23fb923c' text-anchor='middle'>HÖ</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
 </head>
-<body>
-<header class="wrap top">
-  <a class="name" href="{{ '/' | relative_url }}">Hasan Özkan</a>
-  <nav><a href="https://github.com/hasanozkan">GitHub</a><a href="https://www.linkedin.com/in/hasanozkan/">LinkedIn</a><a href="{{ '/feed.xml' | relative_url }}">RSS</a></nav>
+<body class="{{ page.layout }}">
+<div class="progress" aria-hidden="true"></div>
+<header class="bar">
+  <div class="wrap bar-inner">
+    <a class="brand" href="{{ '/' | relative_url }}"><span class="mono-mark small">HÖ</span><span>Hasan Özkan</span></a>
+    <nav>
+      <a href="{{ '/#notes' | relative_url }}">Notes</a>
+      <a href="{{ '/#work' | relative_url }}">Work</a>
+      <a class="cta" href="https://www.linkedin.com/in/hasanozkan/">Contact</a>
+    </nav>
+  </div>
 </header>
-<main class="wrap">{{ content }}</main>
-<footer class="wrap foot">© {{ 'now' | date: '%Y' }} Hasan Özkan · Opinions and samples are my own.</footer>
+<main>{{ content }}</main>
+<footer class="wrap foot">
+  <span>© {{ 'now' | date: '%Y' }} Hasan Özkan · Samples and opinions are my own.</span>
+  <span><a href="https://github.com/hasanozkan">GitHub</a> · <a href="https://www.linkedin.com/in/hasanozkan/">LinkedIn</a> · <a href="{{ '/feed.xml' | relative_url }}">RSS</a></span>
+</footer>
+<script src="{{ '/assets/js/site.js' | relative_url }}" defer></script>
 </body>
 </html>

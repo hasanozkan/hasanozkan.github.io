@@ -1,10 +1,18 @@
 ---
 layout: default
 ---
-<article>
-  <p class="meta">{{ page.date | date: '%-d %B %Y' }}{% if page.tags %} · {{ page.tags | join: ' · ' }}{% endif %}</p>
-  <h1>{{ page.title }}</h1>
-  {% if page.lede %}<p class="lede">{{ page.lede }}</p>{% endif %}
-  <div class="prose">{{ content }}</div>
+{% assign words = content | strip_html | number_of_words %}{% assign minutes = words | divided_by: 200 | plus: 1 %}
+<article class="wrap article">
+  <header class="post-head">
+    <p class="kicker">Field note{% if page.tags %} · {{ page.tags | first }}{% endif %}</p>
+    <h1>{{ page.title }}</h1>
+    {% if page.lede %}<p class="lede">{{ page.lede }}</p>{% endif %}
+    <p class="meta"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%-d %B %Y' }}</time><span>{{ minutes }} min read</span>{% for t in page.tags %}<span class="chip">{{ t }}</span>{% endfor %}</p>
+  </header>
+  <div class="post-body">
+    <nav class="toc" aria-label="On this page"><p>On this page</p><ol></ol></nav>
+    <div class="prose">{{ content }}</div>
+  </div>
+  {% include author.html %}
+  <p class="back"><a href="{{ '/#notes' | relative_url }}">← All notes</a></p>
 </article>
-<p class="back"><a href="{{ '/' | relative_url }}">← All notes</a></p>

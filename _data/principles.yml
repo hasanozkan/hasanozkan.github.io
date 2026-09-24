@@ -1,0 +1,8 @@
+- title: Spec-driven, domain-driven
+  text: Behaviour is written first as numbered rules. Bounded contexts own their language, and the build enforces the architecture.
+- title: GitOps all the way down
+  text: Everything that runs is declared in Git and reconciled. Merging is deploying.
+- title: Measure, don't assume
+  text: A gate is trusted only after it has been broken on purpose and seen to fail.
+- title: Agents inside the process
+  text: Coding agents work from the same specs, conventions and gates as people, with a shared memory of what the team learned.

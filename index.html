@@ -1,16 +1,52 @@
 ---
 layout: default
 ---
-<section class="intro">
-  <h1>Field notes on AI systems and software architecture.</h1>
-  <p>I'm a Tech Lead and AI Architect. I write about decisions I made, what they cost, and what running the result taught me. Every note links to code you can read and run.</p>
+<section class="hero">
+  <div class="wrap">
+    <p class="kicker">Tech Lead &amp; AI Architect · Antalya</p>
+    <h1>I design AI systems <em>that ship</em> — and write down what running them taught me.</h1>
+    <p class="hero-sub">LLM products on a sound domain model, delivered through GitOps, measured in production. These are field notes on the decisions behind them, and every one links to code you can run.</p>
+    <p class="hero-actions"><a class="btn" href="#notes">Read the notes</a><a class="btn ghost" href="https://www.linkedin.com/in/hasanozkan/">Get in touch</a></p>
+  </div>
 </section>
-<ul class="posts">
-{% for post in site.posts %}
-  <li>
-    <a href="{{ post.url | relative_url }}"><h2>{{ post.title }}</h2></a>
-    <p class="meta">{{ post.date | date: '%-d %B %Y' }}{% if post.tags %} · {{ post.tags | join: ' · ' }}{% endif %}</p>
-    {% if post.lede %}<p>{{ post.lede }}</p>{% endif %}
-  </li>
-{% endfor %}
-</ul>
+
+<section id="notes" class="wrap section">
+  <div class="section-head"><h2>Field notes</h2><span class="count">{{ site.posts | size }} published</span></div>
+  <div class="notes">
+  {% for post in site.posts %}
+    <a class="note" href="{{ post.url | relative_url }}">
+      {% if post.image %}<img src="{{ post.image | relative_url }}" alt="" loading="lazy">{% endif %}
+      <div class="note-text">
+        <p class="meta"><time>{{ post.date | date: '%-d %b %Y' }}</time>{% for t in post.tags limit:2 %}<span class="chip">{{ t }}</span>{% endfor %}</p>
+        <h3>{{ post.title }}</h3>
+        {% if post.lede %}<p>{{ post.lede }}</p>{% endif %}
+        <span class="more">Read the note →</span>
+      </div>
+    </a>
+  {% endfor %}
+  </div>
+</section>
+
+<section id="work" class="wrap section">
+  <div class="section-head"><h2>Work you can run</h2><span class="count">independent samples, no company code</span></div>
+  <div class="grid">
+  {% for p in site.data.projects %}
+    <a class="card" href="https://github.com/hasanozkan/{{ p.name }}">
+      <span class="chip">{{ p.kind }}</span>
+      <h3>{{ p.name }}</h3>
+      <p>{{ p.what }}</p>
+    </a>
+  {% endfor %}
+  </div>
+</section>
+
+<section class="wrap section">
+  <div class="section-head"><h2>How I build</h2></div>
+  <ol class="principles">
+  {% for x in site.data.principles %}
+    <li><span class="num">0{{ forloop.index }}</span><h3>{{ x.title }}</h3><p>{{ x.text }}</p></li>
+  {% endfor %}
+  </ol>
+</section>
+
+<section class="wrap section">{% include author.html %}</section>
