@@ -1,5 +1,6 @@
 ---
 layout: post
+date: 2026-09-24 21:00:00 +0000
 title: "The LLM gateway behind a voice-and-text assistant"
 lede: "An assistant that talks, summarizes, extracts and searches makes very different model calls. Here's the gateway they all go through, and what running it taught me."
 description: "A model policy per job, fallbacks you've actually tested, a check for the backups nobody calls, and two guardrails: a hard budget and no personal data leaving."
