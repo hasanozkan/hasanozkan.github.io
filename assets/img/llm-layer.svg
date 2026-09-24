@@ -34,7 +34,7 @@
   <text class="h" x="688" y="52">MODELS</text>
   <rect class="box" x="688" y="68" width="272" height="60" rx="10"/><text class="t" x="706" y="94">Provider A</text><text class="s" x="706" y="114">first choice for most jobs</text>
   <rect class="box" x="688" y="138" width="272" height="60" rx="10"/><text class="t" x="706" y="164">Provider B</text><text class="s" x="706" y="184">fastest, but runs out</text>
-  <rect class="box" x="688" y="208" width="272" height="60" rx="10"/><text class="t" x="706" y="234">Provider C</text><text class="s" x="706" y="254">free, rate-limited</text>
+  <rect class="box" x="688" y="208" width="272" height="60" rx="10"/><text class="t" x="706" y="234">Provider C</text><text class="s" x="706" y="254">wide net, rate-limited</text>
 
   <rect class="acc" x="688" y="292" width="272" height="68" rx="10"/>
   <text class="t" x="706" y="320">Backup check</text>

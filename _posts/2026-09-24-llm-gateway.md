@@ -40,31 +40,31 @@ POLICIES = {
     # Tool calls must parse, Turkish must read well. Seconds are fine.
     CHAT: Policy(
         primary="provider-a/balanced-model",
-        fallbacks=["provider-c/free-router", "provider-d/large-open-model"],
+        fallbacks=["provider-c/wide-router", "provider-d/large-open-model"],
         timeout_s=45, daily_cap_usd=1.00,
     ),
     # The first word matters most. Predictable first, fastest second.
     VOICE_TURN: Policy(
         primary="provider-a/small-fast-model",
-        fallbacks=["provider-b/fastest-model", "provider-c/free-router"],
+        fallbacks=["provider-b/fastest-model", "provider-c/wide-router"],
         timeout_s=20, daily_cap_usd=1.00,
     ),
     # Background work: long context, low cost, plenty of time.
     SUMMARIZE: Policy(
         primary="provider-a/long-context-model",
-        fallbacks=["provider-c/free-router"],
+        fallbacks=["provider-c/wide-router"],
         timeout_s=60, daily_cap_usd=0.50,
     ),
     # Output must validate against a schema. Retries are cheap here.
     EXTRACT: Policy(
         primary="provider-a/balanced-model",
-        fallbacks=["provider-c/free-router"],
+        fallbacks=["provider-c/wide-router"],
         timeout_s=60, daily_cap_usd=0.50,
     ),
     # Small, cheap and consistent.
     CLASSIFY: Policy(
         primary="provider-a/small-fast-model",
-        fallbacks=["provider-c/free-router"],
+        fallbacks=["provider-c/wide-router"],
         timeout_s=30, daily_cap_usd=0.25,
     ),
     # No fallback: a second model means a second vector space.
@@ -93,8 +93,8 @@ It's easy to write a fallback list from reputation: "if this one fails, that
 one is good too." I learned not to trust mine until I'd run it.
 
 For voice, one provider was several times faster to the first word than
-anything else, so it was the obvious first choice. Then its free tier ran out
-of daily tokens in the middle of a real day, and every turn after that wasted
+anything else, so it was the obvious first choice. Then it hit its daily limit
+in the middle of a real day, and every turn after that wasted
 time on a doomed attempt before falling back. For a voice assistant,
 predictable beats fast. The fast provider moved to second place, where it's
 still useful.
