@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 400" font-family="Inter, system-ui, sans-serif">
+  <style>
+    .bg{fill:#0f1115}.box{fill:#1c2129;stroke:#333a45}.door{fill:#161a21;stroke:#fb923c}
+    .acc{fill:rgba(251,146,60,.10);stroke:#fb923c}.t{fill:#e8eaee;font-size:16px;font-weight:600}
+    .s{fill:#9aa3af;font-size:13px}.h{fill:#fb923c;font-size:12px;font-weight:600;letter-spacing:.12em}
+    .ln{stroke:#4b5563;stroke-width:1.5;fill:none}.la{stroke:#fb923c;stroke-width:1.5;fill:none;stroke-dasharray:5 4}
+  </style>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#4b5563"/></marker>
+    <marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#fb923c"/></marker>
+  </defs>
+  <rect class="bg" width="1000" height="400" rx="16"/>
+
+  <text class="h" x="40" y="52">JOBS</text>
+  <rect class="box" x="40" y="68" width="180" height="46" rx="10"/><text class="t" x="58" y="97">Chat</text>
+  <rect class="box" x="40" y="124" width="180" height="46" rx="10"/><text class="t" x="58" y="153">Voice</text>
+  <rect class="box" x="40" y="180" width="180" height="46" rx="10"/><text class="t" x="58" y="209">Summarize</text>
+  <rect class="box" x="40" y="236" width="180" height="46" rx="10"/><text class="t" x="58" y="265">Extract</text>
+  <rect class="box" x="40" y="292" width="180" height="46" rx="10"/><text class="t" x="58" y="321">Search</text>
+  <path class="ln" d="M220 203 H300" marker-end="url(#a)"/>
+
+  <text class="h" x="304" y="52">ONE DOOR</text>
+  <rect class="door" x="304" y="68" width="300" height="270" rx="14"/>
+  <text class="t" x="328" y="104">Gateway</text>
+  <text class="s" x="328" y="142">A policy per job:</text>
+  <text class="s" x="328" y="162">first choice, fallbacks, timeout</text>
+  <text class="s" x="328" y="202">A daily cap per job</text>
+  <text class="s" x="328" y="222">that fails loudly</text>
+  <text class="s" x="328" y="262">Tokens and cost on every call</text>
+  <text class="s" x="328" y="302">Personal data removed</text>
+  <text class="s" x="328" y="322">before anything leaves</text>
+  <path class="ln" d="M604 203 H684" marker-end="url(#a)"/>
+
+  <text class="h" x="688" y="52">MODELS</text>
+  <rect class="box" x="688" y="68" width="272" height="60" rx="10"/><text class="t" x="706" y="94">Provider A</text><text class="s" x="706" y="114">first choice for most jobs</text>
+  <rect class="box" x="688" y="138" width="272" height="60" rx="10"/><text class="t" x="706" y="164">Provider B</text><text class="s" x="706" y="184">fastest, but runs out</text>
+  <rect class="box" x="688" y="208" width="272" height="60" rx="10"/><text class="t" x="706" y="234">Provider C</text><text class="s" x="706" y="254">free, rate-limited</text>
+
+  <rect class="acc" x="688" y="292" width="272" height="68" rx="10"/>
+  <text class="t" x="706" y="320">Backup check</text>
+  <text class="s" x="706" y="342">is every backup still there?</text>
+  <path class="la" d="M930 292 V272" marker-end="url(#b)"/>
+</svg>
